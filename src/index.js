@@ -1,5 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import 'bootstrap/dist/css/bootstrap.css';
+import { Table } from 'react-bootstrap';
 
 class Leaderboard extends React.Component {
   constructor(props) {
@@ -54,7 +56,7 @@ class LeaderboardTable extends React.Component {
       )
     })
     return (
-      <table>
+      <Table striped bordered condensed hover>
         <thead>
           <tr>
             <th>#</th>
@@ -66,7 +68,7 @@ class LeaderboardTable extends React.Component {
         <tbody>
           {rows}
         </tbody>
-      </table>
+      </Table>
     )
   }
 }
